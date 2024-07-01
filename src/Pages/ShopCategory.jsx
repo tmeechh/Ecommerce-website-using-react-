@@ -6,19 +6,23 @@ import Item from '../Components/Item/Item';
 
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
-  console.log(props)
+
+  // Log props and products for debugging
+  console.log("Props:", props);
+  console.log("All Products:", all_product);
+
   return (
     <div className="shop-category">
       <img className='shopcategory-banner' src={props.banner} alt="" />
       <div className="shopcategory-indexSort">
         <p>
-          <span>Showing 1-12</span>out of 36 products
+          <span>Showing 1-12</span>out of 12 products
         </p>
-        <div className="shopcategory-sort">
+        {/* <div className="shopcategory-sort">
           Sort by <img src={dropdown_icon} alt="" />
-        </div>
+        </div> */}
       </div>
-      <div className="shopcategory-products" >
+      <div className="shopcategory-products">
         {all_product.map((item, i) => {
           if (props.category === item.category) {
             return (
@@ -31,13 +35,12 @@ const ShopCategory = (props) => {
                 old_price={item.old_price}
               />
             );
-          } else {
-            return null;
           }
+          return null;
         })}
       </div>
       <div className="shopcategory-loadmore">
-        Explore more
+        {/* Load more button or pagination */}
       </div>
     </div>
   );

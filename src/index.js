@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { Toaster } from 'react-hot-toast';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ShopContextProvider from './Context/ShopContext';
@@ -8,6 +9,10 @@ import ShopContextProvider from './Context/ShopContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ShopContextProvider>
+ <div className="flex justify-start items-start">
+      <Toaster position="top-left" />
+      {/* Rest of your app components */}
+    </div>
      <App />
   </ShopContextProvider>
 );

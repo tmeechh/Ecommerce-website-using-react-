@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
 }
@@ -15,4 +19,70 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.back{
+  width: 4.5rem;
+  height: 1.5rem;
+  display : flex;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: #228B22;
+  border-radius:25px ;
+  border: #228B22 1px solid;
+  transition: box-shadow 0.3s ease;
+  padding: 5px;
+  align-items: center;
+}
+
+.back:hover{
+  box-shadow: 0 4px 8px rgba(34, 139, 34, 0.5);
+}
+
+.product-page a{
+  text-decoration: none;
+}
+
+
+.continue-shopping:hover {
+  box-shadow: 0 4px 8px rgba(34, 139, 34, 0.5);
+  width: auto;
+}
+
+@media (max-width: 1280px) {
+  .back{
+    margin-left: 55px;
+  }
+
+  
+.continue-shopping:hover {
+  box-shadow: 0 4px 8px rgba(34, 139, 34, 0.5);
+  width: auto;
+}
+}
+@media (max-width: 1024px){
+  .back{
+    margin-left: 32px;
+    width: 4rem;
+  
+  }
+
+}
+@media (max-width: 800px) {
+  .back{
+    margin-left: 10px;
+    padding: 5px;
+    width: 3rem;
+    height: 1rem;
+    font-size: 10px;
+  }
+
+  .icon{
+    font-size: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .back{
+    margin-left: 5px;
+  }
 }
